@@ -1,0 +1,85 @@
+---
+// 这里可以写后端逻辑，暂时不需要
+const appName = "智乐透"; 
+const appDesc = "一款算号推演神器，请单击下载";
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{appName} - 官方网站</title>
+    <meta name="description" content={appDesc} />
+    <style>
+      :root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      body { margin: 0; padding: 0; line-height: 1.6; color: #333; background: #f9f9f9; }
+      .container { max-width: 800px; margin: 0 auto; padding: 2rem; text-align: center; }
+      header { padding: 4rem 0; }
+      h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #111; }
+      p.subtitle { font-size: 1.2rem; color: #666; margin-bottom: 2rem; }
+      
+      .buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.2s;
+      }
+      .btn:hover { transform: translateY(-2px); }
+      .btn-apple { background: #000; color: #fff; }
+      .btn-android { background: #3DDC84; color: #000; }
+      .btn-apk { background: #007bff; color: #fff; }
+
+      .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; text-align: left; }
+      .feature-card { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+      .feature-card h3 { margin-top: 0; }
+      
+      footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #ddd; color: #888; font-size: 0.9rem; }
+      
+      /* 手机适配 */
+      @media (max-width: 600px) {
+        h1 { font-size: 2rem; }
+        .container { padding: 1rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- 这里可以放你的 LOGO 图片 -->
+        <!-- <img src="/logo.png" alt="Logo" style="width: 80px; margin-bottom: 1rem;" /> -->
+        <h1>{appName}</h1>
+        <p class="subtitle">{appDesc}</p>
+        
+        <div class="buttons">
+          <!-- 替换为你的真实下载链接 -->
+          <a href="#" class="btn btn-apple"> App Store 下载</a>
+          <a href="#" class="btn btn-android">▶ Google Play 下载</a>
+          <a href="智乐透v0.8.3.apk" class="btn btn-apk">⬇ 直接下载 APK</a>
+        </div>
+      </header>
+
+      <section class="features">
+        <div class="feature-card">
+          <h3>🚀 极速体验</h3>
+          <p>采用最新技术构建，启动速度提升 50%，告别卡顿。</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔒 隐私安全</h3>
+          <p>所有数据本地存储，绝不上传云端，保护你的隐私。</p>
+        </div>
+        <div class="feature-card">
+          <h3>🎨 精美设计</h3>
+          <p>遵循原生设计规范，提供沉浸式的视觉享受。</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2026 Chris2den. All rights reserved.</p>
+        <p>联系邮箱: contact@chris2den.me</p>
+      </footer>
+    </div>
+  </body>
+</html>
